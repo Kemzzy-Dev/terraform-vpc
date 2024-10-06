@@ -1,0 +1,6 @@
+/key_pair/
+.terraform
+terraform.tfstate
+terraform.tfstate.backup
+tfplan
+Ansible
