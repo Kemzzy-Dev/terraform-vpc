@@ -9,12 +9,17 @@ variable "vpc_name" {
 }
 
 variable "instance_type" {
-  type = string
+  type    = string
   default = "t2.micro"
 }
 
+variable "key_name" {
+  type = string
+  default = "web_launch_template"
+}
+
 variable "instance_number" {
-  type = number
+  type    = number
   default = 2
 }
 
@@ -28,9 +33,14 @@ variable "availability_zones" {
   default = ["us-east-1a", "us-east-1b"]
 }
 
-variable "subnet_list" {
+variable "public_subnet_list" {
   type    = list(string)
   default = ["10.0.3.0/24", "10.0.4.0/24"]
+}
+
+variable "private_subnet_list" {
+  type    = list(string)
+  default = ["10.0.5.0/24", "10.0.6.0/24", "10.0.7.0/24", "10.0.8.0/24"]
 }
 
 data "aws_ami" "ubuntu" {
