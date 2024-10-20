@@ -14,7 +14,7 @@ variable "instance_type" {
 }
 
 variable "key_name" {
-  type = string
+  type    = string
   default = "web_launch_template"
 }
 
